@@ -14,8 +14,22 @@
         <img src="src/title.png" alt="titre">
     </div>
     <div>
-        <button class="open-button" onclick="openForm()">Open Form</button>
+        <h2 class="title">Reparation d'ordinateur</h2>
     </div>
+    <!-- Info block -->
+    <div class="info">
+        <div class="main-info">
+            <div>
+                <h3><span>Ó</span>NLINE</h3>
+                <p>Vous acceuil pour vous aider avec son expériences</p>
+            </div>
+            <img src="src/dev.jpg" alt="dev team">
+        </div>
+        <div>
+            <button class="open-button" onclick="openForm()">Nous contacter</button>
+        </div>
+    </div>
+    
     <!-- Pop up block -->
     <div class="form-popup" id="myForm">
       <form action="" method="POST" class="form-container">

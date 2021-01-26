@@ -1,29 +1,72 @@
+@font-face {
+    font-family: "century";
+    src: url("century.TTF");
+}
 *{
     margin: 0;
     padding: 0;
 }
 body{
-    background-color: aqua;
+    /*background-color: rgb(255, 111, 54);*/
+    background-image: url('bg6.jpg');
 }
 div{
     display: flex;
     justify-content: center;
 }
 img{
-    width: 80%;
+    width: 75%;
     z-index: 1;
 }
-/* Button used to open the contact form - fixed at the bottom of the page */
+div .title{
+    margin: auto;
+    font-family: "century";
+    color: #fff;
+    font-size: 5vw;
+    margin-bottom: .5em;
+}
+.info{
+    width: 80%;
+    margin: auto;
+    background-color: #a8a8a8;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: .5em 0;
+}
+.info .main-info{
+    display: flex;
+    justify-content: space-between;
+}
+.main-info img{
+    max-width: 45%;
+    margin: .5em 1em;
+    border-radius: 0 1em 1em 0;
+}
+.main-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0 1em;
+}
+h3{
+    font-family: monospace;
+    font-size: 2em;
+}
+h3 span{
+    color: #f00;
+}
+/* Button used to open the contact form */
 .open-button {
     background-color: #000;
     color: white;
     padding: 10px 5px;
     border: none;
+    border-radius: .4em;
     cursor: pointer;
     margin: auto;
     width: 120px;
 }
-
 /* The popup form - hidden by default */
 .form-popup {
     display: none;
@@ -35,7 +78,6 @@ img{
     backdrop-filter: blur(5px);
     z-index: 5;
 }
-
 /* Add styles to the form container */
 .form-container {
     max-width: 400px;
@@ -47,7 +89,6 @@ img{
     z-index: 10;
     background-color: white;
 }
-
   /* Full-width input fields */
   .form-container input, .form-container textarea {
     width: 100%;
@@ -55,7 +96,6 @@ img{
     margin: 5px 0 20px 0;
     border: none;
     background: #f1f1f1;
-    
 }
 .form-container textarea{
     min-height: 20px;
@@ -65,9 +105,8 @@ img{
 :focus {
     outline: none;
 }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
+/* Set a style for the submit/login button */
+.form-container .btn {
     background-color: #4CAF50;
     color: white;
     padding: 16px 20px;
@@ -76,13 +115,11 @@ img{
     width: 100%;
     margin-bottom:10px;
 }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
+/* Add a red background color to the cancel button */
+.form-container .cancel {
     background-color: red;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
     opacity: 1;
-  }
+}
