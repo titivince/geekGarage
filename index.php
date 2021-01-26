@@ -22,11 +22,12 @@
             <div>
                 <h3><span>Ó</span>NLINE</h3>
                 <p>Vous acceuil pour vous aider avec son expériences</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores obcaecati nisi quae consequatur! Repudiandae, fugiat non!</p>
             </div>
             <img src="src/dev.jpg" alt="dev team">
         </div>
         <div>
-            <button class="open-button" onclick="openForm()">Nous contacter</button>
+            <button id="open-button" >Nous contacter</button>
         </div>
     </div>
     
@@ -47,7 +48,7 @@
         <textarea placeholder="Plus d'information" name="com" required></textarea>
 
         <button type="submit" class="btn">Envoyer</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>
+        <button type="button" class="btn cancel" >Fermer</button>
       </form>
     </div>
 </body>

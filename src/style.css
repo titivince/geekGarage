@@ -2,30 +2,29 @@
     font-family: "century";
     src: url("century.TTF");
 }
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
-    /*background-color: rgb(255, 111, 54);*/
+body {
     background-image: url('bg6.jpg');
 }
-div{
+div {
     display: flex;
     justify-content: center;
 }
-img{
+img {
     width: 75%;
     z-index: 1;
 }
-div .title{
+div .title {
     margin: auto;
     font-family: "century";
     color: #fff;
     font-size: 5vw;
     margin-bottom: .5em;
 }
-.info{
+.info {
     width: 80%;
     margin: auto;
     background-color: #a8a8a8;
@@ -34,30 +33,30 @@ div .title{
     flex-direction: column;
     padding: .5em 0;
 }
-.info .main-info{
+.info .main-info {
     display: flex;
     justify-content: space-between;
 }
-.main-info img{
+.main-info img {
     max-width: 45%;
     margin: .5em 1em;
     border-radius: 0 1em 1em 0;
 }
-.main-info div{
+.main-info div {
     display: flex;
     flex-direction: column;
     justify-content: start;
     margin: 0 1em;
 }
-h3{
+h3 {
     font-family: monospace;
     font-size: 2em;
 }
-h3 span{
+h3 span {
     color: #f00;
 }
 /* Button used to open the contact form */
-.open-button {
+#open-button {
     background-color: #000;
     color: white;
     padding: 10px 5px;
@@ -87,6 +86,7 @@ h3 span{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
+    border-radius: .5em;
     background-color: white;
 }
   /* Full-width input fields */
@@ -118,8 +118,4 @@ h3 span{
 /* Add a red background color to the cancel button */
 .form-container .cancel {
     background-color: red;
-}
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-    opacity: 1;
 }
