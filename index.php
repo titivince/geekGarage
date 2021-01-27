@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script src="src/script.js"></script>
     <title>Geek garage</title>
 </head>
@@ -34,7 +35,10 @@
             <button id="open-button" >Nous contacter</button>
         </div>
     </div>
-    
+    <!-- Map block -->
+    <div class="map-block">
+        <div id="map"></div>
+    </div>
     <!-- Pop up block -->
     <div class="form-popup" id="parentForm" style="">
       <form id="childForm" action="" method="POST" class="form-container">
@@ -43,7 +47,7 @@
         <input type="text" placeholder="Votre Nom / Prenom" name="name" required>
 
         <label for="phone">Telephone</label>
-        <input type="tel" name="email" required>
+        <input type="tel" name="email" placeholder="n°">
 
         <label for="email">Email</label>
         <input type="text" placeholder="Enter Email" name="email" required>
@@ -54,5 +58,8 @@
         <button type="submit" class="btn">Envoyer</button>
       </form>
     </div>
+    <footer>
+        <p>Lorem ipsum dolor sit recusandae.</p>
+    </footer>
 </body>
 </html>

@@ -17,23 +17,22 @@ img {
     width: 75%;
     z-index: 1;
 }
-div .title {
+.title {
     margin: auto;
     font-family: "century";
     color: #fff;
     font-size: 5vw;
-    margin-bottom: .5em;
 }
 .info {
     width: 80%;
-    margin: auto;
+    margin: 2em auto;
     background-color: #a8a8a8;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     padding: .5em 0;
 }
-.info .main-info {
+.main-info {
     display: flex;
     justify-content: space-between;
 }
@@ -66,6 +65,18 @@ h2 span {
     margin: auto;
     width: 120px;
 }
+.map-block{
+    margin-bottom: 1em;
+}
+#map{
+    background-color: #fff;
+    overflow: hidden;
+    padding: 1em;
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    border-radius: .5em;
+}
 /* The popup form - hidden by default */
 .form-popup {
     display: none;
@@ -92,7 +103,7 @@ h2 span {
   /* Full-width input fields */
   .form-container input, .form-container textarea {
     width: 100%;
-    padding: 10px 2px;
+    padding: 5px 2px;
     margin: 5px 0 20px 0;
     border: none;
     background: #f1f1f1;
@@ -114,4 +125,8 @@ h2 span {
     cursor: pointer;
     width: 100%;
     margin-bottom:10px;
+}
+footer{
+    background-color: #888;
+    padding: .5em;
 }
