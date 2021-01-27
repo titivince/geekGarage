@@ -20,9 +20,13 @@
     <div class="info">
         <div class="main-info">
             <div>
-                <h3><span>Ó</span>NLINE</h3>
+                <h2><span>Ó</span>NLINE</h2>
                 <p>Vous acceuil pour vous aider avec son expériences</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores obcaecati nisi quae consequatur! Repudiandae, fugiat non!</p>
+                <h4>DIAGNOSTIC</h4>
+                <h4>INSTALATION SOFTWARE</h4>
+                <h4>MAINTENANCE</h4>
+                <h4>REMASTER</h4>
             </div>
             <img src="src/dev.jpg" alt="dev team">
         </div>
@@ -32,8 +36,8 @@
     </div>
     
     <!-- Pop up block -->
-    <div class="form-popup" id="myForm">
-      <form action="" method="POST" class="form-container">
+    <div class="form-popup" id="parentForm" style="">
+      <form id="childForm" action="" method="POST" class="form-container">
         <h2>Contact</h2>
         <label for="name">Nom / Prenom</label>
         <input type="text" placeholder="Votre Nom / Prenom" name="name" required>
@@ -48,7 +52,6 @@
         <textarea placeholder="Plus d'information" name="com" required></textarea>
 
         <button type="submit" class="btn">Envoyer</button>
-        <button type="button" class="btn cancel" >Fermer</button>
       </form>
     </div>
 </body>
