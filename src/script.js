@@ -40,15 +40,34 @@ window.onload = function() {
     );
 
     var zoom=8;
-
     var markers = new OpenLayers.Layer.Markers( "Markers" );
     map.addLayer(markers);
     
     markers.addMarker(new OpenLayers.Marker(gray));
-
     markers.addMarker(new OpenLayers.Marker(vienne));
-    
     markers.addMarker(new OpenLayers.Marker(beynost));
 
     map.setCenter (france, zoom);
+    
+    var posGray = document.getElementById("OL_Icon_22");
+    var posVienne = document.getElementById("OL_Icon_26");
+    var posBeynost = document.getElementById("OL_Icon_30");
+
+    posGray.addEventListener("click", function () {
+        document.getElementById("infoGray").style.display = "block";
+        document.getElementById("infoVienne").style.display = "none";
+        document.getElementById("infoBeynost").style.display = "none";
+    });
+
+    posVienne.addEventListener("click", function () {
+        document.getElementById("infoGray").style.display = "none";
+        document.getElementById("infoVienne").style.display = "block";
+        document.getElementById("infoBeynost").style.display = "none";
+    });
+
+    posBeynost.addEventListener("click", function () {
+        document.getElementById("infoGray").style.display = "none";
+        document.getElementById("infoVienne").style.display = "none";
+        document.getElementById("infoBeynost").style.display = "block";
+    });
 }

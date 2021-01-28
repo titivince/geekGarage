@@ -71,11 +71,18 @@ h2 span {
 #map{
     background-color: #fff;
     overflow: hidden;
-    padding: 1em;
-    margin: auto;
     width: 600px;
     height: 600px;
     border-radius: .5em;
+}
+#infoGray ,#infoVienne ,#infoBeynost{
+    display: none;
+    background-color: #fff;
+    padding: 1em;
+    margin-left: 1em;
+    border-radius: .5em;
+    width: 300px;
+
 }
 /* The popup form - hidden by default */
 .form-popup {
@@ -101,7 +108,7 @@ h2 span {
     background-color: white;
 }
   /* Full-width input fields */
-  .form-container input, .form-container textarea {
+  .form-container input, .form-container textarea, .form-container select {
     width: 100%;
     padding: 5px 2px;
     margin: 5px 0 20px 0;

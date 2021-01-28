@@ -38,19 +38,47 @@
     <!-- Map block -->
     <div class="map-block">
         <div id="map"></div>
+        <!-- center info block -->
+        <div id="infoGray">
+            <h4>Horaire</h4>
+            <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
+            <p>samedi et dimanche Fermé</p>
+            <p>Téléphone : 03 84 76 90 83</p>
+        </div>
+        <div id="infoVienne">
+            <h4>Horaire</h4>
+            <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
+            <p>samedi et dimanche Fermé</p>
+            <p>Téléphone : 03 84 76 52 44</p>
+        </div>
+        <div id="infoBeynost">
+            <h4>Horaire</h4>
+            <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
+            <p>samedi et dimanche Fermé</p>
+            <p>Téléphone : 03 84 76 52 44</p>
+        </div>
     </div>
+    
     <!-- Pop up block -->
-    <div class="form-popup" id="parentForm" style="">
+    <div class="form-popup" id="parentForm">
       <form id="childForm" action="" method="POST" class="form-container">
         <h2>Contact</h2>
         <label for="name">Nom / Prenom</label>
-        <input type="text" placeholder="Votre Nom / Prenom" name="name" required>
+        <input type="text" name="name" required>
 
         <label for="phone">Telephone</label>
-        <input type="tel" name="email" placeholder="n°">
+        <input type="tel" name="tel" maxlength="12">
 
         <label for="email">Email</label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <input type="email" name="email" minlength="5" required>
+
+        <label for="center">Centre</label>
+        <select name="center" required>
+            <option value="">-sélectionnez un centre-</option>
+            <option value="gray">Gray</option>
+            <option value="vienne">Vienne</option>
+            <option value="beynost">Beynost</option>
+        </select>
 
         <label for="com">Commentaire</label>
         <textarea placeholder="Plus d'information" name="com" required></textarea>
