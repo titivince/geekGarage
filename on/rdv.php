@@ -25,8 +25,8 @@ if(isset($_POST['center'])) {
         </select>
         <input type="submit" value="Rechercher">
     </form>
-    <h2>Pour le centre de <?=$_POST['center']; ?></h2>
-    <?php foreach ($rdvs as $rdv) { ?>
+    <h2><?php if(!empty($_POST['center'])) { echo'Pour le centre de ' . $_POST['center']; ?></h2>
+    <?php foreach ($rdvs as $rdv) : ?>
         <div>
             <h3><?= $rdv['name']; ?></h3>
             <p>Mail : <?= $rdv['email'];?></p>
@@ -34,6 +34,6 @@ if(isset($_POST['center'])) {
                 <p>Télephone : 0<?= $rdv['tel']; } ?></p>
             <p>Information : <?= $rdv['com'];?></p>
         </div>
-    <?php }?>
+    <?php endforeach; }?>
 </body>
 </html>
