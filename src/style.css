@@ -51,7 +51,7 @@ h2 ,h3 {
     font-family: monospace;
     margin: .2em 0;
 }
-h2 span {
+h2 span ,.red{
     color: #f00;
 }
 /* Button used to open the contact form */

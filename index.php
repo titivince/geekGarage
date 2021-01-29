@@ -15,7 +15,6 @@ if(!empty($_POST['name'])){
     } catch (Exeception $e) {
         echo '<script>alert("Une erreur c\'est produite. Veuiller ressayer")</script>';
     }
-    
 }
 ?>
 <!DOCTYPE html>
@@ -53,6 +52,7 @@ if(!empty($_POST['name'])){
             <button id="open-button" >Nous contacter</button>
         </div>
     </div>
+    <h2>Nous retrouver</h2>
     <!-- Map block -->
     <div class="map-block">
         <div id="map"></div>
@@ -61,7 +61,7 @@ if(!empty($_POST['name'])){
             <h2>Centre Gray</h2>
             <h3>Adresse</h3>
             <p>6 Rue Gambetta</p>
-            <h3>Horaire</h3>
+            <h3 class="time">Horaire</h3>
             <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
             <p>samedi et dimanche Fermé</p>
             <p>Téléphone : 03 84 76 90 83</p>
@@ -70,7 +70,7 @@ if(!empty($_POST['name'])){
         <h2>Centre Vienne</h2>
             <h3>Adresse</h3>
             <p>30 Avenue Général Leclerc</p>
-            <h3>Horaire</h3>
+            <h3 class="time">Horaire</h3>
             <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
             <p>samedi et dimanche Fermé</p>
             <p>Téléphone : 03 84 76 52 44</p>
@@ -79,7 +79,7 @@ if(!empty($_POST['name'])){
             <h2>Centre Beynost</h2>
             <h3>Adresse</h3>
             <p>110 Rue du Chat Botté</p>
-            <h3>Horaire</h3>
+            <h3 class="time">Horaire</h3>
             <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
             <p>samedi et dimanche Fermé</p>
             <p>Téléphone : 03 84 76 52 44</p>
