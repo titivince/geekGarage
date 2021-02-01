@@ -65,7 +65,6 @@ h1 ,h2{
     padding: .2em;
     border-radius: .5em;
 }
-
 h2 span ,.red{
     color: #f00;
 }
@@ -103,7 +102,6 @@ h2 span ,.red{
     margin-left: 1em;
     border-radius: .5em;
     width: 300px;
-
 }
 /* The popup form - hidden by default */
 .form-popup {

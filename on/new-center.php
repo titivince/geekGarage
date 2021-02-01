@@ -1,5 +1,4 @@
 <?php
-
 if(!empty($_POST['center'])){
     $pdo = new PDO('mysql:host=localhost;dbname=geek', 'root', '', [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -9,9 +8,10 @@ if(!empty($_POST['center'])){
     $lon = $_POST['lon'];
     $adress = $_POST['adress'];
 
-    $sql = $pdo->query("INSERT INTO center (center, lat, lon, adress) VALUES ('$center', ");
-} ?>
-
+    $sql = $pdo->query("INSERT INTO center (center, lat, lon, adress) VALUES
+    ('$center', '$lat', '$lon', '$adress'");
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -35,6 +35,5 @@ if(!empty($_POST['center'])){
             <input type="submit" value="Valider">
         </form>
     </div>
-    
 </body>
 </html>
