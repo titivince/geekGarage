@@ -12,6 +12,7 @@ if(!empty($_POST['name'])){
         $sql = $pdo->query("INSERT INTO rdv (name, tel, email, center, com) 
             VALUES
             ('$name', '$tel', '$email', '$center', '$com')");
+        $s = '<script>alert("Vos information ont bien été envoyé")</script>';
     } catch (Exeception $e) {
         echo '<script>alert("Une erreur c\'est produite. Veuiller ressayer")</script>';
     }
@@ -85,6 +86,7 @@ if(!empty($_POST['name'])){
             <p>Téléphone : 03 84 76 52 44</p>
         </div>
     </div>
+    <?php if(isset($s)) { echo $s; } ?>
     <!-- Pop up block -->
     <div class="form-popup" id="parentForm">
       <form id="childForm" action="" method="POST">
