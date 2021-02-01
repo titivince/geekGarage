@@ -52,7 +52,7 @@ if(!empty($_POST['name'])){
             <button id="open-button" >Nous contacter</button>
         </div>
     </div>
-    <h2>Nous retrouver</h2>
+    <h2 class="map-title">Nous retrouver</h2>
     <!-- Map block -->
     <div class="map-block">
         <div id="map"></div>
@@ -87,7 +87,7 @@ if(!empty($_POST['name'])){
     </div>
     <!-- Pop up block -->
     <div class="form-popup" id="parentForm">
-      <form id="childForm" action="" method="POST" class="form-container">
+      <form id="childForm" action="" method="POST">
         <h2>Contact</h2>
         <label for="name">Nom / Prenom *</label>
         <input type="text" name="name" required>
@@ -109,7 +109,7 @@ if(!empty($_POST['name'])){
         <label for="com">Commentaire *</label>
         <textarea placeholder="Plus d'information" name="com" required></textarea>
         <p>* Champ obligatiore</p>
-        <button type="submit" class="btn">Envoyer</button>
+        <input type="submit" value="Envoyer">
       </form>
     </div>
     <footer>

@@ -23,6 +23,16 @@ img {
     color: #fff;
     font-size: 5vw;
 }
+h1 ,h2 ,h3 {
+    font-family: monospace;
+    margin: .2em 0;
+}
+h1 {
+    margin: 0 0 .2em 0;
+}
+h1 ,h2{
+    text-align: center;
+}
 .info {
     width: 80%;
     margin: 2em auto;
@@ -41,18 +51,25 @@ img {
     margin: .5em 1em;
     border-radius: 0 1em 1em 0;
 }
-.main-info div {
+.main-info div ,.list {
     display: flex;
     flex-direction: column;
     justify-content: start;
     margin: 0 1em;
 }
-h2 ,h3 {
-    font-family: monospace;
-    margin: .2em 0;
+.list {
+    background-color: #fff;
+    width: 300px;
+    margin: 1em;
+    padding: .2em;
+    border-radius: .5em;
 }
+
 h2 span ,.red{
     color: #f00;
+}
+.green{
+    color: #0f1;
 }
 /* Button used to open the contact form */
 #open-button {
@@ -64,6 +81,9 @@ h2 span ,.red{
     cursor: pointer;
     margin: auto;
     width: 120px;
+}
+.map-title{
+    color: #fff;
 }
 .map-block{
     margin-bottom: 1em;
@@ -96,7 +116,7 @@ h2 span ,.red{
     z-index: 5;
 }
 /* Add styles to the form container */
-.form-container {
+form {
     max-width: 400px;
     padding: 10px;
     position: relative;
@@ -108,14 +128,14 @@ h2 span ,.red{
     background-color: white;
 }
   /* Full-width input fields */
-  .form-container input, .form-container textarea, .form-container select {
+form input, form textarea, form select {
     width: 100%;
     padding: 5px 2px;
     margin: 5px 0 20px 0;
     border: none;
     background: #f1f1f1;
 }
-.form-container textarea{
+form textarea{
     min-height: 20px;
     max-height: 250px;
     resize: vertical;
@@ -124,7 +144,7 @@ h2 span ,.red{
     outline: none;
 }
 /* Set a style for the submit/login button */
-.form-container .btn {
+form input[type=submit] {
     background-color: #4CAF50;
     color: white;
     padding: 16px 20px;

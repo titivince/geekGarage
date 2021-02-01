@@ -77,9 +77,9 @@ window.onload = function() {
   /* Verify if the center is open */
   if(day <= 5 & 9 <= hour & hour < 17) {
     isOpen.innerHTML += ' Ouvert';
-    document.querySelectorAll('.time').classList.add("red");
+    isOpen.classList.add("green");
   } else {
     isOpen.innerHTML += ' Fermé';
-    isOpen.style.color = "#f00";
+    isOpen.classList.add("red");
   }
 }
