@@ -17,8 +17,8 @@ if(!empty($_POST['name'])){
             VALUES
             ('$name', '$tel', '$email', '$center', '$com')");
         ?> <!--
-        use PHPMailer\PHPMailer\PHPMailer;
-        use PHPMailer\PHPMailer\Exception;
+        use PHPMailer/PHPMailer/PHPMailer;
+        use PHPMailer/PHPMailer/Exception;
 
         /* Exception class */
         require 'PHPMailer/src/Exception.php';
@@ -78,6 +78,7 @@ if(!empty($_POST['name'])){
     }
 }
 ?>
+<script>const center = <?= json_encode($pos);?>;</script>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -179,4 +180,3 @@ if(!empty($_POST['name'])){
     </footer>
 </body>
 </html>
-<script>var center = <?= json_encode($pos);?>; </script>

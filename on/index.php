@@ -1,6 +1,5 @@
 <?php
-$login = 'root';
-$password = 'root';
+require('connection.php');
 
 if(isset($_POST['login']) && $login == $_POST['login'] && $password == $_POST['password']) {
     header('location: rdv.php');
