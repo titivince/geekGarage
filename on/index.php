@@ -2,7 +2,7 @@
 $login = 'root';
 $password = 'root';
 
-if($login == $_POST['login'] && $password == $_POST['password']) {
+if(isset($_POST['login']) && $login == $_POST['login'] && $password == $_POST['password']) {
     header('location: rdv.php');
 }
 ?>

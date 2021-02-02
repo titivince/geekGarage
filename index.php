@@ -1,8 +1,12 @@
 <?php
-if(!empty($_POST['name'])){
-    $pdo = new PDO('mysql:host=localhost;dbname=geek', 'root', '', [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+$pdo = new PDO('mysql:host=localhost;dbname=geek', 'root', '', [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
+$pos = $pdo->query("SELECT * FROM center");
+
+$pos = $pos->fetchAll();
+
+if(!empty($_POST['name'])){
     try {
         $name = $_POST['name'];
         $tel = $_POST['tel'];
@@ -12,7 +16,7 @@ if(!empty($_POST['name'])){
         $sql = $pdo->query("INSERT INTO rdv (name, tel, email, center, com) 
             VALUES
             ('$name', '$tel', '$email', '$center', '$com')");
-        
+        ?> <!--
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;
 
@@ -67,7 +71,7 @@ if(!empty($_POST['name'])){
            )
         )
         /* Send the mail */
-        $mail->send();
+        $mail->send(); --> <?php
         $s = '<script>alert("Vos information ont bien été envoyé")</script>';
     } catch (Exeception $e) {
         echo '<script>alert("Une erreur c\'est produite. Veuiller ressayer")</script>';
@@ -159,9 +163,9 @@ if(!empty($_POST['name'])){
         <label for="center">Centre</label>
         <select name="center" required>
             <option value="">-sélectionnez un centre-</option>
-            <option value="gray">Gray</option>
-            <option value="vienne">Vienne</option>
-            <option value="beynost">Beynost</option>
+            <?php foreach($pos as $posCenter) { ?>
+            <option value="<?= $posCenter['center']?>"><?= $posCenter['center']?></option>
+            <?php } ?>
         </select>
 
         <label for="com">Commentaire *</label>
@@ -175,3 +179,4 @@ if(!empty($_POST['name'])){
     </footer>
 </body>
 </html>
+<script>var center = <?= json_encode($pos);?>; </script>

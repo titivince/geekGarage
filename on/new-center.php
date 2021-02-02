@@ -9,7 +9,8 @@ if(!empty($_POST['center'])){
     $adress = $_POST['adress'];
 
     $sql = $pdo->query("INSERT INTO center (center, lat, lon, adress) VALUES
-    ('$center', '$lat', '$lon', '$adress'");
+    ('$center', '$lat', '$lon', '$adress')");
+    echo '<h2>Centre de ' . $center .' bien ajouté</h2>';
 }
 ?>
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ if(!empty($_POST['center'])){
     <link rel="stylesheet" href="../src/style.css">
     <title>Ajouter un centre</title>
 </head>
-<body>
+<body style="height: 100vh">
     <div style="height: 100vh; display: block;">
         <form action="" method="POST">
             <h2>Ajouter un centre</h2>

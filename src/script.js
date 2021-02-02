@@ -6,6 +6,7 @@ window.onload = function() {
   var hour = time.getHours();
   var isOpen = document.querySelectorAll('.time');
   
+  /* popup */
   open.addEventListener("click", function () {
     document.getElementById("parentForm").style.display = "block"
   });
@@ -19,7 +20,7 @@ window.onload = function() {
   map = new OpenLayers.Map("map");
   map.addLayer(new OpenLayers.Layer.OSM());
 
-  var france = new OpenLayers.LonLat(5.275, 46.421) // france
+  var france = new OpenLayers.LonLat(5.2, 46.52) // france
   .transform(
     new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
     map.getProjectionObject() // to Spherical Mercator Projection
@@ -31,7 +32,7 @@ window.onload = function() {
     map.getProjectionObject() // to Spherical Mercator Projection
   );
     
-  var vienne = new OpenLayers.LonLat(4.865783040165061, 45.513962285610944) // Vienne
+  var vienne = new OpenLayers.LonLat(4.86578, 45.514) // Vienne
   .transform(
     new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
     map.getProjectionObject() // to Spherical Mercator Projection
