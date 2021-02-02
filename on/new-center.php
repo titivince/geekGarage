@@ -35,7 +35,7 @@ if(!empty($_POST['center'])){
             <label>Adress</label>
             <input type="text" name="adress" required>
             <label>Telephone</label>
-            <input type="tel" name="tel" placeholder="01234568789" required>
+            <input type="text" name="tel" placeholder="01 23 45 68 78 91" required>
             <input type="submit" value="Valider">
         </form>
     </div>

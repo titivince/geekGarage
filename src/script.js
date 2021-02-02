@@ -20,43 +20,34 @@ window.onload = function() {
   map = new OpenLayers.Map("map");
   map.addLayer(new OpenLayers.Layer.OSM());
 
-  var france = new OpenLayers.LonLat(5.2, 46.52) // france
-  .transform(
+  var france = new OpenLayers.LonLat(5.2, 46.52).transform( //France
     new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
     map.getProjectionObject() // to Spherical Mercator Projection
   );
-
-  var gray = new OpenLayers.LonLat(5.589968317398288, 47.4478583982884) // Gray
-  .transform(
-    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-    map.getProjectionObject() // to Spherical Mercator Projection
-  );
-    
-  var vienne = new OpenLayers.LonLat(4.86578, 45.514) // Vienne
-  .transform(
-    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-    map.getProjectionObject() // to Spherical Mercator Projection
-  );
-    
-  var beynost = new OpenLayers.LonLat(4.992214340175005, 45.827193753960614) // Beynost
-  .transform(
-    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-    map.getProjectionObject() // to Spherical Mercator Projection
-  );
-
+  
   var zoom=8;
+  map.setCenter (france, zoom);
   var markers = new OpenLayers.Layer.Markers( "Markers" );
   map.addLayer(markers);
+  
+  for( i = 0; i < center.length; i++ ) {
+    var ville = center[i].center;
+    var lat = parseFloat(center[i].lat);
+    var lon = parseFloat(center[i].lon);
+    var adress = center[i].adress;
+    var tel = center[i].tel;
     
-  markers.addMarker(new OpenLayers.Marker(gray));
-  markers.addMarker(new OpenLayers.Marker(vienne));
-  markers.addMarker(new OpenLayers.Marker(beynost));
-
-  map.setCenter (france, zoom);
+    var pos = new OpenLayers.LonLat( lon, lat).transform(
+      new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+      map.getProjectionObject() // to Spherical Mercator Projection
+    );
     
-  var posGray = document.getElementById("OL_Icon_22");
-  var posVienne = document.getElementById("OL_Icon_26");
-  var posBeynost = document.getElementById("OL_Icon_30");
+    markers.addMarker(new OpenLayers.Marker(pos));
+  }
+  
+  var posGray = document.getElementById("OL_Icon_38");
+  var posVienne = document.getElementById("OL_Icon_42");
+  var posBeynost = document.getElementById("OL_Icon_46");
 
   posGray.addEventListener("click", function () {
     document.getElementById("infoGray").style.display = "block";
