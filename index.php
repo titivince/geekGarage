@@ -12,6 +12,62 @@ if(!empty($_POST['name'])){
         $sql = $pdo->query("INSERT INTO rdv (name, tel, email, center, com) 
             VALUES
             ('$name', '$tel', '$email', '$center', '$com')");
+        
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+
+        /* Exception class */
+        require 'PHPMailer/src/Exception.php';
+        /* The main PHPMailer class */
+        require 'PHPMailer/src/PHPMailer.php';
+        /* SMTP class, needed if you want to use SMTP */
+        require 'PHPMailer/src/SMTP.php';
+
+        $mail = new PHPMailer(TRUE);
+        
+        /* Set the mail sender */
+        $mail->setFrom('', $name);
+
+        /* Set the subject */
+        $mail->Subject = "Demande de réparation"; // subject
+        
+        /* Set the mail resever */
+        if($center == "gray") {
+            $mail->addAddress('');
+        } elseif($center == "beynost") {
+            $mail->addAddress('');
+        } elseif ($center == "vienne") {
+            $mail->addAddress('');
+        } else {
+            $mail->addAddress('');
+            $mail->Subject = $center . "Demande de réparation";
+        }
+        
+        /* Set the mail message body */
+        $mail->Body = "le message : " . $com . " Le mail : " . $email . "Le telephone :" . $tel;
+
+        /* Enable SMTP debug output */
+        $mail->SMTPDebug = 0; // 2
+ 
+        /* SMTP parameters */
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // host localhost
+        $mail->SMTPAuth = TRUE; // TRUE false
+        $mail->SMTPSecure = 'tls'; // ssl
+        $mail->Username = ''; //  mail adresse
+        $mail->Password = '';  // password
+        $mail->Port = 587; // port 587
+ 
+        /* Disable some SSL checks */
+        $mail->SMTPOptions = array(
+           'ssl' => array(
+           'verify_peer' => false,
+           'verify_peer_name' => false,
+           'allow_self_signed' => true
+           )
+        )
+        /* Send the mail */
+        $mail->send();
         $s = '<script>alert("Vos information ont bien été envoyé")</script>';
     } catch (Exeception $e) {
         echo '<script>alert("Une erreur c\'est produite. Veuiller ressayer")</script>';
