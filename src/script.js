@@ -29,14 +29,23 @@ window.onload = function() {
   map.setCenter (france, zoom);
   var markers = new OpenLayers.Layer.Markers( "Markers" );
   map.addLayer(markers);
-  
+  var entry = "OL_Icon_"
+      n = 38;
+  var ville;
+  var lat;
+  var lon;
+  var adress;
+  var tel;
   for( i = 0; i < center.length; i++ ) {
-    var ville = center[i].center;
-    var lat = parseFloat(center[i].lat);
-    var lon = parseFloat(center[i].lon);
-    var adress = center[i].adress;
-    var tel = center[i].tel;
     
+    window['entry' + n] = entry + n.toString();
+    window['ville' + n] = center[i].center;
+    lat = parseFloat(center[i].lat);
+    lon = parseFloat(center[i].lon);
+    window['adress' + n] = center[i].adress;
+    window['tel' + n] = center[i].tel;
+    n = parseInt(n) + 4;
+
     var pos = new OpenLayers.LonLat( lon, lat).transform(
       new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
       map.getProjectionObject() // to Spherical Mercator Projection
@@ -45,26 +54,38 @@ window.onload = function() {
     markers.addMarker(new OpenLayers.Marker(pos));
   }
   
-  var posGray = document.getElementById("OL_Icon_38");
-  var posVienne = document.getElementById("OL_Icon_42");
-  var posBeynost = document.getElementById("OL_Icon_46");
+  var entry38 = document.getElementById("OL_Icon_38");
+  var entry42 = document.getElementById("OL_Icon_42");
+  var entry46 = document.getElementById("OL_Icon_46");
 
-  posGray.addEventListener("click", function () {
-    document.getElementById("infoGray").style.display = "block";
-    document.getElementById("infoVienne").style.display = "none";
-    document.getElementById("infoBeynost").style.display = "none";
+  entry38.addEventListener("click", function () {
+    document.getElementById("mapInfo").style.display = "block";
+    var centerName = document.getElementById("center");
+    centerName.innerHTML = "Centre " + ville38;
+    var adressName = document.getElementById("adress");
+    adressName.innerHTML = adress38;
+    var telName = document.getElementById("tel");
+    telName.innerHTML = "Téléphone : " + tel38;
   });
 
-  posVienne.addEventListener("click", function () {
-    document.getElementById("infoGray").style.display = "none";
-    document.getElementById("infoVienne").style.display = "block";
-    document.getElementById("infoBeynost").style.display = "none";
+  entry42.addEventListener("click", function () {
+    document.getElementById("mapInfo").style.display = "block";
+    var centerName = document.getElementById("center");
+    centerName.innerHTML = "Centre " + ville42;
+    var adressName = document.getElementById("adress");
+    adressName.innerHTML = adress42;
+    var telName = document.getElementById("tel");
+    telName.innerHTML = "Téléphone : " + tel42;
   });
 
-  posBeynost.addEventListener("click", function () {
-    document.getElementById("infoGray").style.display = "none";
-    document.getElementById("infoVienne").style.display = "none";
-    document.getElementById("infoBeynost").style.display = "block";
+  entry46.addEventListener("click", function () {
+    document.getElementById("mapInfo").style.display = "block";
+    var centerName = document.getElementById("center");
+    centerName.innerHTML = "Centre " + ville46;
+    var adressName = document.getElementById("adress");
+    adressName.innerHTML = adress46;
+    var telName = document.getElementById("tel");
+    telName.innerHTML = "Téléphone : " + tel46;
   });
   /* Verify if the center is open */
   if(day <= 5 & 9 <= hour & hour < 17) {

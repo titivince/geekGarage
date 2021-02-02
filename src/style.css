@@ -95,7 +95,7 @@ h2 span ,.red{
     height: 600px;
     border-radius: .5em;
 }
-#infoGray ,#infoVienne ,#infoBeynost{
+#mapInfo{
     display: none;
     background-color: #fff;
     padding: 1em;

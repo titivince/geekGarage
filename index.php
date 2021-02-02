@@ -119,32 +119,14 @@ if(!empty($_POST['name'])){
     <div class="map-block">
         <div id="map"></div>
         <!-- center info block -->
-        <div id="infoGray">
-            <h2>Centre Gray</h2>
+        <div id="mapInfo">
+            <h2 id="center">Centre </h2>
             <h3>Adresse</h3>
-            <p>6 Rue Gambetta</p>
+            <p id="adress"></p>
             <h3 class="time">Horaire</h3>
             <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
             <p>samedi et dimanche Fermé</p>
-            <p>Téléphone : 03 84 76 90 83</p>
-        </div>
-        <div id="infoVienne">
-        <h2>Centre Vienne</h2>
-            <h3>Adresse</h3>
-            <p>30 Avenue Général Leclerc</p>
-            <h3 class="time">Horaire</h3>
-            <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
-            <p>samedi et dimanche Fermé</p>
-            <p>Téléphone : 03 84 76 52 44</p>
-        </div>
-        <div id="infoBeynost">
-            <h2>Centre Beynost</h2>
-            <h3>Adresse</h3>
-            <p>110 Rue du Chat Botté</p>
-            <h3 class="time">Horaire</h3>
-            <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
-            <p>samedi et dimanche Fermé</p>
-            <p>Téléphone : 03 84 76 52 44</p>
+            <p id="tel">Téléphone : </p>
         </div>
     </div>
     <?php if(isset($s)) { echo $s; } ?>
