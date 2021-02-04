@@ -11,7 +11,7 @@ if(!empty($_POST['center'])){
 
     $sql = $pdo->query("INSERT INTO center (center, lat, lon, adress, tel) VALUES
     ('$center', '$lat', '$lon', '$adress', '$tel)");
-    echo '<h2>Centre de ' . $center .' bien ajouté</h2>';
+    echo '<h2>Centre de ' . $center .' à bien ajouté</h2>';
 }
 ?>
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ if(!empty($_POST['center'])){
             <input type="text" name="lat" required>
             <label>Longitude</label>
             <input type="text" name="lon" required>
-            <label>Adress</label>
+            <label>Adresse</label>
             <input type="text" name="adress" required>
             <label>Telephone</label>
             <input type="text" name="tel" placeholder="01 23 45 68 78 91" required>
