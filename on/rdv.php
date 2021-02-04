@@ -16,7 +16,7 @@ if(isset($_GET['center'])) {
     <link rel="stylesheet" href="../src/style.css">
     <title>RDV</title>
 </head>
-<body>
+<body style="background-image: none; background-color: #888">
     <div style="height: 100vh; display: block;">
         <?php if(!empty($_GET['center'])) { echo '<h1>Pour le centre de ' . $_GET['center'] . '</h1>'?>
         <div style="flex-flow: wrap">

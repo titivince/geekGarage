@@ -13,7 +13,7 @@ if(isset($_POST['login']) && $login == $_POST['login'] && $password == $_POST['p
     <link rel="stylesheet" href="../src/style.css">
     <title>RDV</title>
 </head>
-<body>
+<body style="background-image: none; background-color: #888">
     <div style="height: 100vh; display: block">
         <form action="" method="POST">
             <h2>Connection</h2>

@@ -103,10 +103,10 @@ if(!empty($_POST['name'])){
                 <h2><span>Ó</span>NLINE</h2>
                 <p>Vous acceuil pour vous aider avec son expériences</p>
                 <p>Pour le</p>
-                <h3>DIAGNOSTIC</h3>
-                <h3>INSTALATION SOFTWARE</h3>
-                <h3>MAINTENANCE</h3>
-                <h3>REMASTER</h3>
+                <h2>DIAGNOSTIC</h2>
+                <h2>INSTALATION SOFTWARE</h2>
+                <h2>MAINTENANCE</h2>
+                <h2>REMASTER</h2>
             </div>
             <img src="src/dev.jpg" alt="dev team">
         </div>
@@ -158,7 +158,10 @@ if(!empty($_POST['name'])){
       </form>
     </div>
     <footer>
-        <p>Lorem ipsum dolor sit recusandae.</p>
+        <div>
+            <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online">
+        </div>
+        <p>Onlineformapro</p>
     </footer>
 </body>
 </html>

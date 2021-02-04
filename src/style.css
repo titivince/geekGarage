@@ -37,7 +37,7 @@ h1 ,h2{
 .info {
     width: 80%;
     margin: 2em auto;
-    background-color: #a8a8a8;
+    background-color: #ccc;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
@@ -84,6 +84,7 @@ h2 span ,.red{
 }
 .map-title{
     color: #fff;
+    font-size: 3em;
 }
 .map-block{
     margin-bottom: 1em;
@@ -134,7 +135,7 @@ form input, form textarea, form select {
     border: none;
     background: #f1f1f1;
 }
-form textarea{
+form textarea {
     min-height: 20px;
     max-height: 250px;
     resize: vertical;
@@ -152,7 +153,15 @@ form input[type=submit] {
     width: 100%;
     margin:10px 0;
 }
-footer{
+footer {
+    display: flex;
+    
     background-color: #888;
     padding: .5em;
+}
+footer div {
+    width: 300px;
+}
+footer p {
+    align-self: flex-end;
 }

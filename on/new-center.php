@@ -22,7 +22,7 @@ if(!empty($_POST['center'])){
     <link rel="stylesheet" href="../src/style.css">
     <title>Ajouter un centre</title>
 </head>
-<body style="height: 100vh">
+<body style="height: 100vh; background-image: none; background-color: #888"">
     <div style="height: 100vh; display: block;">
         <form action="" method="POST">
             <h2>Ajouter un centre</h2>

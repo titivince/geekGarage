@@ -11,7 +11,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=geek', 'root', '', [
     <link rel="stylesheet" href="../src/style.css">
     <title>Modifer</title>
 </head>
-<body>
+<body style="background-image: none; background-color: #888">
 <div style="height: 100vh; display: block;">
 <?php
 

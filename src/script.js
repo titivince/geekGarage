@@ -16,6 +16,17 @@ window.onload = function() {
   });
   document.getElementById('childForm').addEventListener('click', e => e.stopPropagation());
 
+  /* Verify if the center is open */
+  if(day <= 5 & 9 <= hour & hour < 17) {
+    for (var i = 0; i < isOpen.length; i++) {
+      isOpen[i].classList.add('green');
+    }
+  } else {
+    for (var i = 0; i < isOpen.length; i++) {
+      isOpen[i].classList.add('red');
+    }
+  }
+
   /* map */
   map = new OpenLayers.Map("map");
   map.addLayer(new OpenLayers.Layer.OSM());
@@ -29,8 +40,8 @@ window.onload = function() {
   map.setCenter (france, zoom);
   var markers = new OpenLayers.Layer.Markers( "Markers" );
   map.addLayer(markers);
-  var entry = "OL_Icon_"
-      n = 38;
+  var entry = "OL_Icon_";
+  var n = 38;
   var ville;
   var lat;
   var lon;
@@ -39,6 +50,7 @@ window.onload = function() {
   for( i = 0; i < center.length; i++ ) {
     
     window['entry' + n] = entry + n.toString();
+    window['generate' + n] = document.getElementById(entry + n);
     window['ville' + n] = center[i].center;
     lat = parseFloat(center[i].lat);
     lon = parseFloat(center[i].lon);
@@ -57,6 +69,8 @@ window.onload = function() {
   var entry38 = document.getElementById("OL_Icon_38");
   var entry42 = document.getElementById("OL_Icon_42");
   var entry46 = document.getElementById("OL_Icon_46");
+  var entry50 = document.getElementById("OL_Icon_50");
+  var entry54 = document.getElementById("OL_Icon_54");
 
   entry38.addEventListener("click", function () {
     document.getElementById("mapInfo").style.display = "block";
@@ -87,14 +101,27 @@ window.onload = function() {
     var telName = document.getElementById("tel");
     telName.innerHTML = "Téléphone : " + tel46;
   });
-  /* Verify if the center is open */
-  if(day <= 5 & 9 <= hour & hour < 17) {
-    for (var i = 0; i < isOpen.length; i++) {
-      isOpen[i].classList.add('green');
-    }
-  } else {
-    for (var i = 0; i < isOpen.length; i++) {
-      isOpen[i].classList.add('red');
+  
+  if(entry50 !== null) {
+    entry50.addEventListener("click", function () {
+      document.getElementById("mapInfo").style.display = "block";
+      var centerName = document.getElementById("center");
+      centerName.innerHTML = "Centre " + ville50;
+      var adressName = document.getElementById("adress");
+      adressName.innerHTML = adress50;
+      var telName = document.getElementById("tel");
+      telName.innerHTML = "Téléphone : " + tel50;
+    });
+    if(entry54 !== null) {
+      entry54.addEventListener("click", function () {
+        document.getElementById("mapInfo").style.display = "block";
+        var centerName = document.getElementById("center");
+        centerName.innerHTML = "Centre " + ville54;
+        var adressName = document.getElementById("adress");
+        adressName.innerHTML = adress54;
+        var telName = document.getElementById("tel");
+        telName.innerHTML = "Téléphone : " + tel54;
+      });
     }
   }
 }
