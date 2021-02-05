@@ -117,9 +117,7 @@ if(!empty($_POST['name'])){
     <h2 class="map-title">Nous retrouver</h2>
     <!-- Map block -->
     <div class="map-block">
-        <div id="map"></div>
-        <!-- center info block -->
-        <div id="mapInfo">
+        <div id="map"><div id="mapInfo">
             <h2 id="center">Centre </h2>
             <h3>Adresse</h3>
             <p id="adress"></p>
@@ -127,7 +125,9 @@ if(!empty($_POST['name'])){
             <p>lundi à vendredi 08:30 – 12:00, 13:30 – 17:00</p>
             <p>samedi et dimanche Fermé</p>
             <p id="tel">Téléphone : </p>
-        </div>
+        </div></div>
+        <!-- center info block -->
+        
     </div>
     <?php if(isset($s)) { echo $s; } ?>
     <!-- Pop up block -->
@@ -161,7 +161,7 @@ if(!empty($_POST['name'])){
         <div>
             <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online">
         </div>
-        <p>Onlineformapro</p>
+        <p>Promo 47 ACS</p>
     </footer>
 </body>
 </html>

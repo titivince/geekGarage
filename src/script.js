@@ -36,7 +36,7 @@ window.onload = function() {
     map.getProjectionObject() // to Spherical Mercator Projection
   );
   
-  var zoom=8;
+  var zoom = 8;
   map.setCenter (france, zoom);
   var markers = new OpenLayers.Layer.Markers( "Markers" );
   map.addLayer(markers);

@@ -157,11 +157,16 @@ footer {
     display: flex;
     
     background-color: #888;
-    padding: .5em;
 }
 footer div {
-    width: 300px;
+    width: 250px;
 }
 footer p {
     align-self: flex-end;
+}
+
+@media screen and (max-width: 426px){
+    .main-info img {
+        display: none;
+    }
 }
