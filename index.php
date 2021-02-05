@@ -117,17 +117,21 @@ if(!empty($_POST['name'])){
     <h2 class="map-title">Nous retrouver</h2>
     <!-- Map block -->
     <div class="map-block">
-        <div id="map"><div id="mapInfo">
-            <h2 id="center">Centre </h2>
-            <h3>Adresse</h3>
-            <p id="adress"></p>
-            <h3 class="time">Horaire</h3>
-            <p>lundi à vendredi 08:30 – 12:00, 13:30 – 17:00</p>
-            <p>samedi et dimanche Fermé</p>
-            <p id="tel">Téléphone : </p>
-        </div></div>
-        <!-- center info block -->
-        
+        <div id="map">
+            <!-- center info block -->
+            <div id="mapInfo">
+                <h2 id="center">Centre </h2>
+                <h3>Adresse</h3>
+                <p id="adress"></p>
+                <div>
+                    <h3>Horaire</h3>
+                    <div class="time"></div>
+                </div>
+                <p>lundi à vendredi 08:30 – 12:00, 13:30 – 17:00</p>
+                <p>samedi et dimanche Fermé</p>
+                <p id="tel">Téléphone : </p>
+            </div>
+        </div>
     </div>
     <?php if(isset($s)) { echo $s; } ?>
     <!-- Pop up block -->

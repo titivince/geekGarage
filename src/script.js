@@ -4,7 +4,7 @@ window.onload = function() {
   var time = new Date();
   var day = time.getDay();
   var hour = time.getHours();
-  var isOpen = document.querySelectorAll('.time');
+  var isOpen = document.querySelector('.time');
   
   /* popup */
   open.addEventListener("click", function () {
@@ -18,13 +18,9 @@ window.onload = function() {
 
   /* Verify if the center is open */
   if(day <= 5 & 9 <= hour & hour < 17) {
-    for (var i = 0; i < isOpen.length; i++) {
-      isOpen[i].classList.add('green');
-    }
+    isOpen.classList.add('green');
   } else {
-    for (var i = 0; i < isOpen.length; i++) {
-      isOpen[i].classList.add('red');
-    }
+    isOpen.classList.add('red');
   }
 
   /* map */

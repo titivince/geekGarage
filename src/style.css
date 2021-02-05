@@ -31,7 +31,7 @@ h1 {
     color:  #fff;
     margin: 0 0 .2em 0;
 }
-h1 ,h2{
+h1 ,h2 {
     text-align: center;
 }
 .info {
@@ -65,11 +65,14 @@ h1 ,h2{
     padding: .2em;
     border-radius: .5em;
 }
-h2 span ,.red{
+h2 span {
     color: #f00;
 }
-.green{
-    color: #0f1;
+.red {
+    background-color: #f00;
+}
+.green {
+    background-color: #0f1;
 }
 /* Button used to open the contact form */
 #open-button {
@@ -82,27 +85,37 @@ h2 span ,.red{
     margin: auto;
     width: 120px;
 }
-.map-title{
+.map-title {
     color: #fff;
     font-size: 3em;
 }
-.map-block{
+.map-block {
     margin-bottom: 1em;
 }
-#map{
+#map {
     background-color: #fff;
     overflow: hidden;
     width: 600px;
     height: 600px;
     border-radius: .5em;
 }
-#mapInfo{
+#mapInfo {
     display: none;
     background-color: #fff;
     padding: 1em;
     margin-left: 1em;
     border-radius: .5em;
     width: 300px;
+}
+#mapInfo div {
+    justify-content: start;
+}
+.time {
+    align-self: center;
+    width: 10px;
+    margin-left: .2em;
+    height: 10px;
+    border-radius: 5px;
 }
 /* The popup form - hidden by default */
 .form-popup {
