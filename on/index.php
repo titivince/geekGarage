@@ -2,9 +2,11 @@
 require('connection.php');
 
 if(isset($_POST['login']) && $login == $_POST['login'] && $password == $_POST['password']) {
+    session_start();
+    /*session is started if you don't write this line can't use $_Session  global variable*/
+    $_SESSION["connected"] = "yes";
     header('location: rdv.php');
-}
-?>
+} ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

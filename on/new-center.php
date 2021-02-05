@@ -1,5 +1,8 @@
 <?php
-if(!empty($_POST['center'])){
+session_start();
+/*session is started if you don't write this line can't use $_Session  global variable*/
+if(isset($_SESSION["connected"]) && $_SESSION["connected"] == "yes" ) {
+    if(!empty($_POST['center'])){
     $pdo = new PDO('mysql:host=localhost;dbname=geek', 'root', '', [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
@@ -12,8 +15,7 @@ if(!empty($_POST['center'])){
     $sql = $pdo->query("INSERT INTO center (center, lat, lon, adress, tel) VALUES
     ('$center', '$lat', '$lon', '$adress', '$tel)");
     echo '<h2>Centre de ' . $center .' à bien ajouté</h2>';
-}
-?>
+} ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,3 +43,4 @@ if(!empty($_POST['center'])){
     </div>
 </body>
 </html>
+ <?php } else { header("HTTP/1.1 403 Forbidden"); } ?>

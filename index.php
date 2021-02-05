@@ -124,7 +124,7 @@ if(!empty($_POST['name'])){
             <h3>Adresse</h3>
             <p id="adress"></p>
             <h3 class="time">Horaire</h3>
-            <p>lundi à vendredi 08:30–12:00, 13:30–17:00</p>
+            <p>lundi à vendredi 08:30 – 12:00, 13:30 – 17:00</p>
             <p>samedi et dimanche Fermé</p>
             <p id="tel">Téléphone : </p>
         </div>
