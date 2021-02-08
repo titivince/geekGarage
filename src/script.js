@@ -27,7 +27,7 @@ window.onload = function() {
   map = new OpenLayers.Map("map");
   map.addLayer(new OpenLayers.Layer.OSM());
 
-  var france = new OpenLayers.LonLat(5.2, 46.52).transform( //France
+  var france = new OpenLayers.LonLat(5.6, 46.52).transform( //France
     new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
     map.getProjectionObject() // to Spherical Mercator Projection
   );
