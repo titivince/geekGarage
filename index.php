@@ -87,36 +87,30 @@ if(!empty($_POST['name'])){
     <link rel="stylesheet" href="src/style.css">
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script src="src/script.js"></script>
-    <title>Geek garage</title>
+    <title>Ónline</title>
 </head>
 <body>
-    <div>
-        <img src="src/title.png" alt="titre">
-    </div>
-    <div>
-        <h2 class="title">Reparation d'ordinateur</h2>
+    <header>
+        <img src="https://www.onlineformapro.com/wp-content/uploads/2020/01/logo-03.svg" alt="Online" srcset="">
+        <h1>REPARE PC ÓNLINE</h1>
+    </header>
+    <div class="intro">
+        <img src="src/op.png">
     </div>
     <!-- Info block -->
     <div class="info">
-        <div class="main-info">
-            <div>
-                <h2><span>Ó</span>NLINE</h2>
-                <p>Vous acceuil pour vous aider avec son expériences</p>
-                <p>Pour le</p>
-                <h2>DIAGNOSTIC</h2>
-                <h2>INSTALATION SOFTWARE</h2>
-                <h2>MAINTENANCE</h2>
-                <h2>REMASTER</h2>
-            </div>
-            <img src="src/dev.jpg" alt="dev team">
-        </div>
         <div>
-            <button id="open-button" >Nous contacter</button>
+            <h2>Nos compétences</h2>
+            <h2 class="skill">Le DIAGNOSTIC</h2>
+            <h2 class="skill">L'INSTALATION SOFTWARE</h2>
+            <h2 class="skill">La MAINTENANCE</h2>
+            <h2 class="skill">Le REMASTER</h2>
         </div>
+        <img src="src/dev.jpg" alt="dev team">
     </div>
-    <h2 class="map-title">Nous retrouver</h2>
     <!-- Map block -->
     <div class="map-block">
+        <h2 class="map-title">Nous retrouver</h2>
         <div id="map">
             <!-- center info block -->
             <div id="mapInfo">
@@ -132,6 +126,9 @@ if(!empty($_POST['name'])){
                 <p id="tel">Téléphone : </p>
             </div>
         </div>
+        <div>
+        <button id="open-button" >Nous contacter</button>
+        </div>
     </div>
     <?php if(isset($s)) { echo $s; } ?>
     <!-- Pop up block -->
@@ -140,13 +137,11 @@ if(!empty($_POST['name'])){
         <h2>Contact</h2>
         <label for="name">Nom / Prenom *</label>
         <input type="text" name="name" required>
-
         <label for="phone">Telephone</label>
-        <input type="tel" name="tel" placeholder="0123456789" maxlength="12">
+        <input type="tel" name="tel" maxlength="12">
 
         <label for="email">Email *</label>
         <input type="email" name="email" minlength="5" required>
-
         <label for="center">Centre</label>
         <select name="center" required>
             <option value="">-sélectionnez un centre-</option>
@@ -162,10 +157,7 @@ if(!empty($_POST['name'])){
       </form>
     </div>
     <footer>
-        <div>
-            <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online">
-        </div>
-        <p>Promo 47 ACS</p>
+        <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online">
     </footer>
 </body>
 </html>

@@ -7,52 +7,48 @@
     padding: 0;
 }
 body {
-    background-image: url('bg6.jpg');
+    overflow-x: hidden;
 }
 div {
     display: flex;
     justify-content: center;
 }
-img {
-    width: 75%;
-    z-index: 1;
-}
-.title {
-    margin: auto;
-    font-family: "century";
-    color: #fff;
-    font-size: 5vw;
-}
 h1 ,h2 ,h3 {
     font-family: monospace;
-    margin: .2em 0;
+}
+header img ,footer img {
+    width: 200px;
+}
+header img {
+    position: absolute;
+    left: 0%;
 }
 h1 {
-    color:  #fff;
-    margin: 0 0 .2em 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5em;
+    color:  #d31e44;
+}
+.intro {
+    height: 100vh;
 }
 h1 ,h2 {
     text-align: center;
 }
 .info {
-    width: 80%;
-    margin: 2em auto;
-    background-color: #ccc;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
+    background-color: #d31e44;
+    justify-content: space-evenly;
+}
+.info div {
     padding: .5em 0;
 }
-.main-info {
-    display: flex;
-    justify-content: space-between;
-}
-.main-info img {
-    max-width: 45%;
+.info img {
+    max-width: 48%;
     margin: .5em 1em;
-    border-radius: 0 1em 1em 0;
+    border-radius: 1em;
 }
-.main-info div ,.list {
+.info div ,.list {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -65,8 +61,9 @@ h1 ,h2 {
     padding: .2em;
     border-radius: .5em;
 }
-h2 span {
-    color: #f00;
+.skill {
+    text-align: start;
+    margin-top: .2em;
 }
 .red {
     background-color: #f00;
@@ -75,44 +72,47 @@ h2 span {
     background-color: #0f1;
 }
 /* Button used to open the contact form */
-#open-button {
-    background-color: #000;
-    color: white;
-    padding: 10px 5px;
-    border: none;
-    border-radius: .4em;
-    cursor: pointer;
-    margin: auto;
-    width: 120px;
+
+.map-block {
+    flex-direction: column;
+    background-color: #212121;
 }
 .map-title {
     color: #fff;
-    font-size: 3em;
-}
-.map-block {
-    margin-bottom: 1em;
+    font-size: 3.5em;
 }
 #map {
-    background-color: #fff;
+    background-color: #d31e44;
     overflow: hidden;
     width: 600px;
     height: 600px;
+    align-self: center;
     border-radius: .5em;
 }
 #mapInfo {
     display: none;
-    padding: 1em;
-    width: 300px;
+    padding: .6em;
 }
 #mapInfo div {
     justify-content: start;
 }
 .time {
     align-self: center;
-    width: 10px;
+    width: 12px;
     margin-left: .3em;
-    height: 10px;
-    border-radius: 5px;
+    height: 12px;
+    border: 2px solid #212121;
+    border-radius: 8px;
+}
+#open-button {
+    background-color: #d31e44;
+    color: white;
+    padding: 10px 5px;
+    border: none;
+    border-radius: .4em;
+    cursor: pointer;
+    margin: .5em;
+    width: 120px;
 }
 /* The popup form - hidden by default */
 .form-popup {
@@ -122,7 +122,7 @@ h2 span {
     width: 100vw;
     height: 100vh;
     background-size:cover;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     z-index: 5;
 }
 /* Add styles to the form container */
@@ -135,7 +135,7 @@ form {
     transform: translate(-50%, -50%);
     z-index: 10;
     border-radius: .5em;
-    background-color: white;
+    background-color: #d31e44;
 }
   /* Full-width input fields */
 form input, form textarea, form select {
@@ -143,10 +143,11 @@ form input, form textarea, form select {
     padding: 5px 2px;
     margin: 5px 0 20px 0;
     border: none;
+    border-radius: .2em;
     background: #f1f1f1;
 }
 form textarea {
-    min-height: 20px;
+    min-height: 40px;
     max-height: 250px;
     resize: vertical;
 }
@@ -166,17 +167,26 @@ form input[type=submit] {
 footer {
     display: flex;
     
-    background-color: #888;
+    background-color: #212121;
 }
-footer div {
-    width: 220px;
-}
+
 footer p {
     align-self: flex-end;
 }
-
+@media screen and (max-width: 769px){
+    #map {
+        flex-direction: column-reverse;
+        align-self: start;
+    }
+    #center {
+        text-align: start;
+    }
+}
 @media screen and (max-width: 426px){
-    .main-info img {
+    h1 {
+        font-size: 9vw;
+    }
+    .info img {
         display: none;
     }
 }
