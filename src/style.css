@@ -31,6 +31,7 @@ h1 {
     color:  #d31e44;
 }
 .intro {
+    background-color: #212121;
     height: 100vh;
 }
 h1 ,h2 {
@@ -188,5 +189,8 @@ footer p {
     }
     .info img {
         display: none;
+    }
+    #mapInfo {
+        max-width: 100vw;
     }
 }

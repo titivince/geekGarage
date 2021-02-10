@@ -85,13 +85,14 @@ if(!empty($_POST['name'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <link rel='icon' href='https://vos-formations.com/favicon.ico' type='image/x-icon'/>
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script src="src/script.js"></script>
     <title>Ónline</title>
 </head>
 <body>
     <header>
-        <img src="https://www.onlineformapro.com/wp-content/uploads/2020/01/logo-03.svg" alt="Online" srcset="">
+        <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online" srcset="">
         <h1>REPARE PC ÓNLINE</h1>
     </header>
     <div class="intro">
