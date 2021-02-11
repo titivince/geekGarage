@@ -36,16 +36,9 @@ if(!empty($_POST['name'])){
         $mail->Subject = "Demande de réparation"; // subject
         
         /* Set the mail resever */
-        if($center == "gray") {
-            $mail->addAddress('');
-        } elseif($center == "beynost") {
-            $mail->addAddress('');
-        } elseif ($center == "vienne") {
-            $mail->addAddress('');
-        } else {
-            $mail->addAddress('');
-            $mail->Subject = $center . "Demande de réparation";
-        }
+        $mail->addAddress('');
+        
+        $mail->Subject = $center . "Demande de réparation";
         
         /* Set the mail message body */
         $mail->Body = "le message : " . $com . " Le mail : " . $email . "Le telephone :" . $tel;
@@ -96,16 +89,16 @@ if(!empty($_POST['name'])){
         <h1>REPARE PC ÓNLINE</h1>
     </header>
     <div class="intro">
-        <img src="src/op.png">
+        <img src="src/intro.jpg">
     </div>
     <!-- Info block -->
     <div class="info">
         <div>
             <h2>Nos compétences</h2>
-            <h2 class="skill">Le DIAGNOSTIC</h2>
-            <h2 class="skill">L'INSTALATION SOFTWARE</h2>
-            <h2 class="skill">La MAINTENANCE</h2>
-            <h2 class="skill">Le REMASTER</h2>
+            <h3 class="skill">Le DIAGNOSTIC</h3>
+            <h3 class="skill">L'INSTALATION SOFTWARE</h3>
+            <h3 class="skill">La MAINTENANCE</h3>
+            <h3 class="skill">Le REMASTER</h3>
         </div>
         <img src="src/dev.jpg" alt="dev team">
     </div>

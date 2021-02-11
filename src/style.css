@@ -18,6 +18,7 @@ h1 ,h2 ,h3 {
 }
 header img ,footer img {
     width: 200px;
+    padding: .2em;
 }
 header img {
     position: absolute;
@@ -37,6 +38,10 @@ h1 {
 h1 ,h2 {
     text-align: center;
 }
+h2 {
+    font-size: 3em;
+    padding: .5em 0;
+}
 .info {
     background-color: #d31e44;
     justify-content: space-evenly;
@@ -50,7 +55,7 @@ h1 ,h2 {
     border-radius: 1em;
 }
 .info div ,.list {
-    display: flex;
+    align-self: center;
     flex-direction: column;
     justify-content: start;
     margin: 0 1em;
@@ -136,19 +141,19 @@ form {
     transform: translate(-50%, -50%);
     z-index: 10;
     border-radius: .5em;
-    background-color: #d31e44;
+    background-color: #fff;
 }
-  /* Full-width input fields */
+/* Full-width input fields */
 form input, form textarea, form select {
     width: 100%;
     padding: 5px 2px;
     margin: 5px 0 20px 0;
     border: none;
     border-radius: .2em;
-    background: #f1f1f1;
+    background: #eee;
 }
 form textarea {
-    min-height: 40px;
+    min-height: 60px;
     max-height: 250px;
     resize: vertical;
 }
@@ -166,13 +171,12 @@ form input[type=submit] {
     margin:10px 0;
 }
 footer {
-    display: flex;
-    
     background-color: #212121;
 }
-
-footer p {
-    align-self: flex-end;
+@media screen and (max-width: 1025px){
+    h1 {
+        top: 100px;
+    }
 }
 @media screen and (max-width: 769px){
     #map {
@@ -184,8 +188,9 @@ footer p {
     }
 }
 @media screen and (max-width: 426px){
-    h1 {
-        font-size: 9vw;
+    header img {
+        left: 50%;
+        transform: translateX(-50%);
     }
     .info img {
         display: none;
