@@ -40,7 +40,7 @@ h1 ,h2 {
 }
 h2 {
     font-size: 3em;
-    padding: .5em 0;
+    padding: .3em 0;
 }
 .info {
     background-color: #d31e44;
@@ -51,7 +51,7 @@ h2 {
 }
 .info img {
     max-width: 48%;
-    margin: .5em 1em;
+    margin: 2em 0;
     border-radius: 1em;
 }
 .info div ,.list {
@@ -185,6 +185,9 @@ footer {
     }
     #center {
         text-align: start;
+    }
+    h2 {
+        font-size: 2em;
     }
 }
 @media screen and (max-width: 426px){
