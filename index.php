@@ -81,7 +81,7 @@ if(!empty($_POST['name'])){
     <link rel='icon' href='https://vos-formations.com/favicon.ico' type='image/x-icon'/>
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script src="src/script.js"></script>
-    <title>Ónline</title>
+    <title>Ónline | Repare pc</title>
 </head>
 <body>
     <header>
@@ -100,7 +100,7 @@ if(!empty($_POST['name'])){
             <h3 class="skill">La MAINTENANCE</h3>
             <h3 class="skill">Le REMASTER</h3>
         </div>
-        <img src="src/dev.jpg" alt="dev team">
+        <img src="src/op.png" alt="">
     </div>
     <!-- Map block -->
     <div class="map-block">
@@ -120,8 +120,8 @@ if(!empty($_POST['name'])){
                 <p id="tel">Téléphone : </p>
             </div>
         </div>
-        <div>
-        <button id="open-button" >Nous contacter</button>
+        <div id="btn">
+            <button id="open-button" >Nous contacter</button>
         </div>
     </div>
     <?php if(isset($s)) { echo $s; } ?>
@@ -129,6 +129,7 @@ if(!empty($_POST['name'])){
     <div class="form-popup" id="parentForm">
       <form id="childForm" action="" method="POST">
         <h2>Contact</h2>
+        <input style="display: none;" type="text" name="center" id="fillCenter" required>
         <label for="name">Nom / Prenom *</label>
         <input type="text" name="name" required>
         <label for="phone">Telephone</label>
@@ -136,13 +137,6 @@ if(!empty($_POST['name'])){
 
         <label for="email">Email *</label>
         <input type="email" name="email" minlength="5" required>
-        <label for="center">Centre</label>
-        <select name="center" required>
-            <option value="">-sélectionnez un centre-</option>
-            <?php foreach($pos as $posCenter) { ?>
-            <option value="<?= $posCenter['center']?>"><?= $posCenter['center']?></option>
-            <?php } ?>
-        </select>
 
         <label for="com">Commentaire *</label>
         <textarea placeholder="Plus d'information" name="com" required></textarea>
