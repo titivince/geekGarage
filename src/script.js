@@ -22,7 +22,7 @@ window.onload = function() {
   document.getElementById('childForm').addEventListener('click', e => e.stopPropagation());
 
   /* Verify if the center is open */
-  if(day <= 5 & 9 <= hour & hour < 17) {
+  if(day <= 5 & 14 <= hour & hour < 17) {
     isOpen.classList.add('green');
   } else {
     isOpen.classList.add('red');

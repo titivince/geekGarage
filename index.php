@@ -95,10 +95,12 @@ if(!empty($_POST['name'])){
     <div class="info">
         <div>
             <h2>Nos compétences</h2>
-            <h3 class="skill">Le DIAGNOSTIC</h3>
-            <h3 class="skill">L'INSTALATION SOFTWARE</h3>
-            <h3 class="skill">La MAINTENANCE</h3>
-            <h3 class="skill">Le REMASTER</h3>
+            <h3 class="skill">- Accueil de la clientèle</h3>
+            <h3 class="skill">- Analyse du besoin</h3>
+            <h3 class="skill">- Assistance aux utilisateurs</h3>
+            <h3 class="skill">- Conseils techniques et accompagnement</h3>
+            <h3 class="skill">- Rédaction des rapports d'intervention</h3>
+            <h3 class="skill">- Communication avec le client dans le respect des bonnes pratiques</h3>
         </div>
         <img src="src/op.png" alt="">
     </div>
@@ -115,8 +117,8 @@ if(!empty($_POST['name'])){
                     <h3>Horaire</h3>
                     <div class="time"></div>
                 </div>
-                <p>lundi à vendredi 08:30 – 12:00, 13:30 – 17:00</p>
-                <p>samedi et dimanche Fermé</p>
+                <p>Lundi à Vendredi</p>
+                <p>13 h 30 – 17 h</p>
                 <p id="tel">Téléphone : </p>
             </div>
         </div>

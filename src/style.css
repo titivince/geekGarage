@@ -68,7 +68,7 @@ h2 {
 }
 .skill {
     text-align: start;
-    margin-top: .2em;
+    margin-top: .3em;
 }
 .red {
     background-color: #f00;
@@ -97,6 +97,7 @@ h2 {
 #mapInfo {
     display: none;
     padding: .6em;
+    width: 280px;
 }
 #mapInfo div {
     justify-content: start;

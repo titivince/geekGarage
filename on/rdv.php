@@ -33,7 +33,7 @@ if(isset($_SESSION["connected"]) && $_SESSION["connected"] == "yes" ) {
     <body style="background-image: none; background-color: #888">
         <div style="height: 100vh; display: block;">
             <?php if(!empty($_GET['center'])) {
-                echo '<h1>Pour le centre de ' . $_GET['center'] . '</h1>'?>
+                echo '<h1 style="position: static; transform: none">Pour le centre de ' . $_GET['center'] . '</h1>'?>
                 <div style="flex-flow: wrap">
                     <?php foreach ($rdvs as $rdv) : ?>
                         <div class="list">
