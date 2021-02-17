@@ -36,16 +36,9 @@ if(!empty($_POST['name'])){
         $mail->Subject = "Demande de réparation"; // subject
         
         /* Set the mail resever */
-        if($center == "gray") {
-            $mail->addAddress('');
-        } elseif($center == "beynost") {
-            $mail->addAddress('');
-        } elseif ($center == "vienne") {
-            $mail->addAddress('');
-        } else {
-            $mail->addAddress('');
-            $mail->Subject = $center . "Demande de réparation";
-        }
+        $mail->addAddress('');
+        
+        $mail->Subject = $center . "Demande de réparation";
         
         /* Set the mail message body */
         $mail->Body = "le message : " . $com . " Le mail : " . $email . "Le telephone :" . $tel;
@@ -85,38 +78,35 @@ if(!empty($_POST['name'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <link rel='icon' href='https://vos-formations.com/favicon.ico' type='image/x-icon'/>
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script src="src/script.js"></script>
-    <title>Geek garage</title>
+    <title>Ónline | Repare pc</title>
 </head>
 <body>
-    <div>
-        <img src="src/title.png" alt="titre">
-    </div>
-    <div>
-        <h2 class="title">Reparation d'ordinateur</h2>
+    <header>
+        <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online" srcset="">
+        <h1>REPARE PC ÓNLINE</h1>
+    </header>
+    <div class="intro">
+        <img src="src/intro.jpg">
     </div>
     <!-- Info block -->
     <div class="info">
-        <div class="main-info">
-            <div>
-                <h2><span>Ó</span>NLINE</h2>
-                <p>Vous acceuil pour vous aider avec son expériences</p>
-                <p>Pour le</p>
-                <h2>DIAGNOSTIC</h2>
-                <h2>INSTALATION SOFTWARE</h2>
-                <h2>MAINTENANCE</h2>
-                <h2>REMASTER</h2>
-            </div>
-            <img src="src/dev.jpg" alt="dev team">
-        </div>
         <div>
-            <button id="open-button" >Nous contacter</button>
+            <h2>Nos compétences</h2>
+            <h3 class="skill">- Accueil de la clientèle</h3>
+            <h3 class="skill">- Analyse du besoin</h3>
+            <h3 class="skill">- Assistance aux utilisateurs</h3>
+            <h3 class="skill">- Conseils techniques et accompagnement</h3>
+            <h3 class="skill">- Rédaction des rapports d'intervention</h3>
+            <h3 class="skill">- Communication avec le client dans le respect des bonnes pratiques</h3>
         </div>
+        <img src="src/op.png" alt="">
     </div>
-    <h2 class="map-title">Nous retrouver</h2>
     <!-- Map block -->
     <div class="map-block">
+        <h2 class="map-title">Nous retrouver</h2>
         <div id="map">
             <!-- center info block -->
             <div id="mapInfo">
@@ -127,10 +117,13 @@ if(!empty($_POST['name'])){
                     <h3>Horaire</h3>
                     <div class="time"></div>
                 </div>
-                <p>lundi à vendredi 08:30 – 12:00, 13:30 – 17:00</p>
-                <p>samedi et dimanche Fermé</p>
+                <p>Lundi à Vendredi</p>
+                <p>13 h 30 – 17 h</p>
                 <p id="tel">Téléphone : </p>
             </div>
+        </div>
+        <div id="btn">
+            <button id="open-button" >Nous contacter</button>
         </div>
     </div>
     <?php if(isset($s)) { echo $s; } ?>
@@ -138,22 +131,14 @@ if(!empty($_POST['name'])){
     <div class="form-popup" id="parentForm">
       <form id="childForm" action="" method="POST">
         <h2>Contact</h2>
+        <input style="display: none;" type="text" name="center" id="fillCenter" required>
         <label for="name">Nom / Prenom *</label>
         <input type="text" name="name" required>
-
         <label for="phone">Telephone</label>
-        <input type="tel" name="tel" placeholder="0123456789" maxlength="12">
+        <input type="tel" name="tel" maxlength="12">
 
         <label for="email">Email *</label>
         <input type="email" name="email" minlength="5" required>
-
-        <label for="center">Centre</label>
-        <select name="center" required>
-            <option value="">-sélectionnez un centre-</option>
-            <?php foreach($pos as $posCenter) { ?>
-            <option value="<?= $posCenter['center']?>"><?= $posCenter['center']?></option>
-            <?php } ?>
-        </select>
 
         <label for="com">Commentaire *</label>
         <textarea placeholder="Plus d'information" name="com" required></textarea>
@@ -162,10 +147,7 @@ if(!empty($_POST['name'])){
       </form>
     </div>
     <footer>
-        <div>
-            <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online">
-        </div>
-        <p>Promo 47 ACS</p>
+        <img src="https://apapp.onlineformapro.com/php5/manager/ressources/tpl/login/images/logo.svg" alt="Online">
     </footer>
 </body>
 </html>
